@@ -1,0 +1,28 @@
+/******************************************************************************
+Find the second largest and second smallest 
+*******************************************************************************/
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		int a[] = {1, 2, 4, 6, 7, 5};
+		int n = a.length;
+		int max=secondLargest(a,n);
+		int min = secondSmallest(a,n);
+		System.out.println(max);
+		System.out.println(min);
+	}
+	public static int secondLargest(int a[], int n)
+	{
+	    Arrays.sort(a);
+	    int max2=a[n-2];
+	    return max2;
+	}
+	public static int secondSmallest(int a[], int n)
+	{
+	    Arrays.sort(a);
+		int min2 = a[1];
+		return min2;
+	}
+}
