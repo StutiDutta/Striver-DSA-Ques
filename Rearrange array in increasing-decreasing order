@@ -1,0 +1,40 @@
+/*
+Rearrange array in increasing-decreasing order
+
+Problem Statement: Rearrange the array such that the first half is arranged in increasing order, and the second half is arranged in decreasing order
+Example 1:
+Input: 8 7 1 6 5 9
+Output: 1 5 6 9 8 7
+Explanation: First three elements are in the ascending order and next three elements are in the descending order.
+*/
+
+import java.util.*;
+
+class Sort
+{
+    //display
+    public static void display(int a[], int n){
+        for(int i = 0;i<n/2;i++)
+        System.out.print(a[i]+"\t");
+    }
+    
+     //reverse
+    public static void reverse(int a[], int n){
+        for(int i = (n-1) ;i>=(n/2) ; i--)
+        System.out.print(a[i]+"\t");
+    }
+    
+    public static void main(String args[])
+    {
+        //int a[] = {8,7,1,6,5,9};
+        //int a[]={4,2,8,6,15,5,9, 20};
+        int a[]={4,2,8,6,15,5,9};
+        //Sort it in ascending order
+        Arrays.sort(a);
+        //display first three ascending order
+        display(a,a.length);
+        //reverse and displaying the last three descending order
+        reverse(a,a.length);
+        
+    }
+}
